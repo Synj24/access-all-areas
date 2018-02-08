@@ -6,40 +6,40 @@ extends(src="layout.sgr")
       h4 Latest News
     .news.grid
       .spot
-        img(src="http://placehold.it/615x376", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/615x376?sig=1", alt="")
         date 21 January 2017
-        h2 title
+        h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=1", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=2", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=3", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=4", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     .g-label
       h4 Features
     .features.grid
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=5", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x153", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=6", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .spot
-        img(src="http://placehold.it/615x376", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/615x376?sig=7", alt="")
         date 21 January 2017
-        h2 title
+        h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       aside.p-home-ad-filmstrip
         img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
     .g-ad-leaderboard
@@ -48,18 +48,18 @@ extends(src="layout.sgr")
       h4 Blogs
     .blogs.grid
       .card
-        img(src="http://placehold.it/300x167", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=1", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x167", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=2", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x167", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=3", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="http://placehold.it/300x167", alt="")
+        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=4", alt="")
         date 21 January 2017
-        h3 title
+        h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
