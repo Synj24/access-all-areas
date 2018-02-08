@@ -10,7 +10,7 @@ extends(src="layout.sgr")
         date 21 January 2017
         h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=1", alt="")
+        img(src="https://source.unsplash.com/collection/244173/300x153?sig=1", alt="")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
@@ -18,7 +18,7 @@ extends(src="layout.sgr")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=3", alt="")
+        img(src="https://source.unsplash.com/collection/244173/300x153?sig=3", alt="")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
@@ -29,7 +29,7 @@ extends(src="layout.sgr")
       h4 Features
     .features.grid
       .card
-        img(src="https://source.unsplash.com/collection/1314854/300x153?sig=5", alt="")
+        img(src="https://source.unsplash.com/collection/244173/300x153?sig=5", alt="")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
@@ -37,7 +37,7 @@ extends(src="layout.sgr")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .spot
-        img(src="https://source.unsplash.com/collection/1314854/615x376?sig=7", alt="")
+        img(src="https://source.unsplash.com/collection/244173/615x376?sig=7", alt="")
         date 21 January 2017
         h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       aside.p-home-ad-filmstrip
@@ -52,7 +52,7 @@ extends(src="layout.sgr")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=2", alt="")
+        img(src="https://source.unsplash.com/collection/244173/300x167?sig=2", alt="")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
@@ -60,6 +60,6 @@ extends(src="layout.sgr")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       .card
-        img(src="https://source.unsplash.com/collection/1314854/300x167?sig=4", alt="")
+        img(src="https://source.unsplash.com/collection/244173/300x167?sig=4", alt="")
         date 21 January 2017
         h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
