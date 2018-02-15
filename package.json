@@ -14,6 +14,7 @@
     "spike-js-standards": "^2.0.2",
     "spike-optimize": "^0.1.2",
     "spike-page-id": "^1.0.0",
+    "spike-wordpress": "^0.3.0",
     "sugarml": "^0.6.0",
     "sugarss": "^1.0.0"
   },
