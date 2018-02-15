@@ -1,0 +1,6 @@
+.g-ad-leaderboard
+  // /43271057/AAA_Static_Leaderboard
+  div#div-gpt-ad-1518099474852-0
+    script.
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1518099474852-0'); });
+  // img(src="http://placehold.it/728x90/969696/CCCCCC?text=Leaderboard", alt="")
