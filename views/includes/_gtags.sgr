@@ -1,0 +1,14 @@
+script(async='async' src='https://www.googletagservices.com/tag/js/gpt.js')
+script.
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+
+script.
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/43271057/AAA_Static_Pushdown', [[970, 150], [320, 50]], 'div-gpt-ad-1518104394203-0').addService(googletag.pubads());
+    googletag.defineSlot('/43271057/AAA_Static_Leaderboard', [[728, 90], [320, 50]], 'div-gpt-ad-1518099474852-0').addService(googletag.pubads());
+    googletag.defineSlot('/43271057/AAA_Static_Filmstrip', [300, 600], 'div-gpt-ad-1518099514073-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
