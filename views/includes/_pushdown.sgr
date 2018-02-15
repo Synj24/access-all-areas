@@ -1,2 +1,7 @@
 .g-ad-pushdown
-  img(src="http://placehold.it/970x90/969696/CCCCCC?text=PushDown", alt="")
+  // /43271057/AAA_Static_Pushdown
+  div#div-gpt-ad-1518104394203-0
+    script.
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1518104394203-0'); });
+
+  // img(src="http://placehold.it/970x90/969696/CCCCCC?text=PushDown", alt="")
