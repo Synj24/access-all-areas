@@ -1,3 +1,4 @@
+const Wordpress = require('spike-wordpress')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
@@ -11,6 +12,33 @@ module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  plugins: [
+    new Wordpress({
+      site: 'www.accessaa.co.uk',
+      addDataTo: locals,
+      posts: [
+        {
+          name: 'posts',
+          number: '10'
+        },
+        {
+          name: 'news',
+          category: 'news',
+          order: 'date'
+        },
+        {
+          name: 'features',
+          category: 'features',
+          order: 'date'
+        },
+        {
+          name: 'blog',
+          category: 'blog',
+          order: 'date'
+        }
+      ]
+    })
+  ],
   reshape: htmlStandards({
     parser: sugarml,
     locals: (ctx) => Object.assign(locals, {pageId: pageId(ctx), foo: 'bar' }),
