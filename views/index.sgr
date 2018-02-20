@@ -7,26 +7,27 @@ extends(src="layout.sgr")
       each(loop='news, i in wordpress.news')
         if(condition='i == 1')
           .spot
-            img(src="{{news.featured_image}}", alt="" width="615px" height="376px")
+            img(src="{{news.featured_image}}", alt="")
             date {{ news.date }}
             h3 {{ news.title }}
-        elseif(condition='i > 1 && i < 6')
+        elseif(condition='i >= 2 && i <= 5')
+          a(href={{ item._url }})
           .card
-            img(src="{{news.featured_image}}", alt="" width="300px" height="153px")
+            img(src="{{news.featured_image}}", alt="")
             date {{ news.date }}
             h3 {{ news.title }}
     .g-label
       h4 Features
     .features.grid
       each(loop='features, i in wordpress.features')
-        if(condition='i < 2')
+        if(condition='i == 2 || i == 3')
           .card
-            img(src="{{features.featured_image}}", alt="" width="300px" height="153px")
+            img(src="{{features.featured_image}}", alt="")
             date {{ features.date }}
             h3 {{ features.title }}
-        if(condition='i == 3')
+        if(condition='i == 1')
           .spot
-            img(src="{{features.featured_image}}", alt="" width="615px" height="376px")
+            img(src="{{features.featured_image}}", alt="")
             date {{ features.date }}
             h3 {{ features.title }}
       include(src="includes/_filmstrip.sgr")
@@ -37,6 +38,6 @@ extends(src="layout.sgr")
       each(loop='blog, i in wordpress.blog')
         if(condition='i < 4')
           .card
-            img(src="{{blog.featured_image}}", alt="" width="300px" height="167px")
+            img(src="{{blog.featured_image}}", alt="")
             date {{ blog.date }}
             h3 {{ blog.title }}
