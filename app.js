@@ -24,7 +24,11 @@ module.exports = {
         {
           name: 'news',
           category: 'news',
-          order: 'date'
+          order: 'date',
+          template: {
+            path: 'views/article.sgr',
+            output: (item) => 'posts/${item.slug}.html'
+          }
         },
         {
           name: 'features',
