@@ -27,7 +27,7 @@ module.exports = {
           order: 'date',
           template: {
             path: 'views/article.sgr',
-            output: (item) => 'posts/${item.slug}.html'
+            output: (item) => `posts/${item.slug}.html`
           }
         },
         {
@@ -44,6 +44,7 @@ module.exports = {
     })
   ],
   reshape: htmlStandards({
+    root: 'views',
     parser: sugarml,
     locals: (ctx) => Object.assign(locals, {pageId: pageId(ctx), foo: 'bar' }),
     // minifying html is breaking whitespace in footer

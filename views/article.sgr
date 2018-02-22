@@ -1,3 +1,11 @@
 extends(src="layout.sgr")
   block(name="content")
-    h1 this is a test
+    h1 {{ item.title }}
+    // a(href={{ item._url }})
+    //   img(src={{ item.featured_image }})
+    //   p {{ item.content }}
+    // h1 test
+    // h1 {{ item.title }}
+    // iframe(src="http://www.strawpoll.me/embed_1/15077539" style="width:680px;height:342px;border:0;") Loading poll...
+    // iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSdnOZVPlgpI83msdQRAptAOxwqn9E9k7c_MGiph7Tdu3BHU-Q/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0")Loading...
+    // iframe(src="https://strawpoll.com/embed/xa59dxhp" width="608px" height="335px" style="border-style: none;")

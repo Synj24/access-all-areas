@@ -1,43 +1,48 @@
 extends(src="layout.sgr")
   block(name="content")
-    include(src="includes/_leaderboard.sgr")
+    // include(src="includes/_leaderboard.sgr")
     .g-label
       h4 Latest News
     .news.grid
       each(loop='news, i in wordpress.news')
         if(condition='i == 1')
           .spot
-            img(src="{{news.featured_image}}", alt="")
-            date {{ news.date }}
-            h3 {{ news.title }}
+            a(href="{{ news._url }}")
+              img(src="{{news.featured_image}}", alt="")
+              date {{ news.date }}
+              h3 {{ news.title }}
         elseif(condition='i >= 2 && i <= 5')
-          a(href={{ item._url }})
           .card
-            img(src="{{news.featured_image}}", alt="")
-            date {{ news.date }}
-            h3 {{ news.title }}
+            a(href="/article")
+              img(src="{{news.featured_image}}", alt="")
+              date {{ news.date }}
+              h3 {{ news.title }}
     .g-label
       h4 Features
     .features.grid
       each(loop='features, i in wordpress.features')
         if(condition='i == 2 || i == 3')
           .card
-            img(src="{{features.featured_image}}", alt="")
-            date {{ features.date }}
-            h3 {{ features.title }}
+            a(href="/article")
+              img(src="{{features.featured_image}}", alt="")
+              date {{ features.date }}
+              h3 {{ features.title }}
         if(condition='i == 1')
           .spot
-            img(src="{{features.featured_image}}", alt="")
-            date {{ features.date }}
-            h3 {{ features.title }}
+            a(href="/article")
+              img(src="{{features.featured_image}}", alt="")
+              date {{ features.date }}
+              h3 {{ features.title }}
+              p {{ features.excerpt }}
       include(src="includes/_filmstrip.sgr")
-    include(src="includes/_leaderboard.sgr")
+    // include(src="includes/_leaderboard.sgr")
     .g-label
       h4 Blogs
     .blogs.grid
       each(loop='blog, i in wordpress.blog')
         if(condition='i < 4')
           .card
-            img(src="{{blog.featured_image}}", alt="")
-            date {{ blog.date }}
-            h3 {{ blog.title }}
+            a(href="/article")
+              img(src="{{blog.featured_image}}", alt="")
+              date {{ blog.date }}
+              h3 {{ blog.title }}

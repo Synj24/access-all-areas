@@ -27,7 +27,7 @@ footer
       | T: 020 8481 1122
       | circulation@mashmedia.net
     a(href="/subscribe")
-      img(src="img/subscribe-banner-light.png")
+      img(src="/img/subscribe-banner-light.png")
   .newsletter
     h3 Newsletter
     p Sign up for our email newsletter and stay updated on all our latest storys and features
