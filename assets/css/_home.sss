@@ -2,3 +2,43 @@
   & img
     position: relative
     bottom: 51px
+
+.spot,
+.card
+  & img
+    object-fit: cover
+
+.news,
+.features
+  & .spot
+    & img
+      @media (min-width: 1245px)
+        width: 615px
+        height: 376px
+      @media (min-width: 651px) and (max-width: 1244px)
+        height: 250px
+  & .card
+    & img
+      @media (min-width: 1245px)
+        width: 300px
+        height: 153px
+      @media (min-width: 651px) and (max-width: 1244px)
+        height: 250px
+      @media (max-width: 650px)
+        height: 225px
+
+.features
+  & .spot
+    & img
+      @media (max-width: 650px)
+        height: 300px
+.blogs
+  & .card
+    & img
+      @media (min-width: 1245px)
+        width: 300px
+        height: 167px
+      @media (min-width: 651px) and (max-width: 1244px)
+        height: 250px
+      @media (max-width: 650px)
+        height: 225px

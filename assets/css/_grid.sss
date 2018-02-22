@@ -31,7 +31,7 @@
     .grid
       display: grid
       grid-gap: 15px
-      grid-template-columns: repeat(4, 1fr)
+      grid-template-columns: repeat(4, minmax(300px,1fr))
 
   @media (max-width: 1244px)
     aside
@@ -46,18 +46,19 @@
         width: 100%
       /* & .spot img
         width: 300px */
-    .news
-      & :last-child
-        display: none
+    .news > :last-child
+      display: none
     .features
       & .spot
         order: -1
-        @media (max-width: 767px)
+        @media (max-width: 1244px)
           grid-column: 1 / -1
-          
+
   @media (max-width: 650px)
     .grid
       grid-template-columns: minmax(300px,1fr)
+      & img
+        width: 100%
 #news,
 #features,
 #blogs,
