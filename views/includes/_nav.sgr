@@ -1,5 +1,5 @@
 nav
-  a(href="#")
+  a(href="/")
     img(src="/img/logo.svg", alt="logo")
   section#menu
     .priority#menu-close
