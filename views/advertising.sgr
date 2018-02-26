@@ -1,0 +1,23 @@
+extends(src="layout.sgr")
+  block(name="content")
+    aside
+      img(src="https://source.unsplash.com/random")
+      p caption here
+    h1 Advertising
+    h2 Circulation & Advertising
+    p
+    | em Access All Areas
+    | has been the UK event industry’s leading magazine for more than 21 years. It’s read by more than 23,500 decision makers, the people that need to know about your products and services, and the print/digital circulation is continually updated to guarantee advertisers a targeted, quality audience.
+    p Core readership includes –
+
+    ul
+      li Corporate, Charity and Local Authority Event Managers
+      li Event Management Companies
+      li Event Organisers
+      li Festival Organisers
+      li Production Managers
+      li Promoters
+
+    p We also attend major trade shows, including the Event Production Show, International Confex, PLASA and the Showman’s Show. With up to 5,000 additional copies of Access All Areas distributed at each, it’s an opportunity to reach an even larger and wider audience of event professionals, all eager to deal with companies that have the experience, the knowledge and the resources to help them produce successful events.
+
+    p Editorially, the magazine talks to the people that truly matter, drilling into top tier concerts, festivals, sports, community and corporate events for its news and reviews, constantly on the look out for innovation and inspiration. It’s a unique recipe, acclaimed by the industry it serves.
