@@ -1,0 +1,55 @@
+extends(src="layout.sgr")
+  block(name="content")
+    h1 Contact us
+    h2 Editorial Contacts
+
+    p.
+      Tom Hall – Editor
+      Tel: 020 8481 11 22
+      Email: thall@mashmedia.net
+
+    h2 Advertising Contacts
+
+    p.
+      James Linin – Sales director
+      Tel: 020 8481 1122
+      Email: jlinin@mashmedia.net
+
+    h2 Social Media
+
+    p.
+      Follow Access All Areas on Twitter: twitter.com/access_aa
+      Follow Access All Areas on Instagram: instagram.com/access_aa
+
+    h2 Listings Contact
+
+    p.
+      For additions or alterations to listings in the Directory search, listings@mashmedia.net
+
+    p.
+      For information relevant to any of our magazines or directories, please visit www.mashmedia.net
+
+    h2 Circulation and Subscription contacts
+
+    p.
+      For all circulation or subscription enquiries, contact Bret Weekes at circulation@mashmedia.net
+      020 8481 1122
+
+    p.
+      Access All Areas is part of Mash Media Group Ltd.
+
+    pre.
+      Head Office
+
+      Mash Media Group Ltd
+      Second Floor, Apple Market House
+      17 Union Street
+      Kingston Upon Thames
+      KT1 1RR
+
+
+    // contact form here
+
+    h2 Visit Us
+    p.
+      We are based in Kingston Upon Thames, at the 2nd Floor Apple Market House, 17 Union Street, Kingston Upon Thames, KT1 1RR
