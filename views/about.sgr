@@ -1,11 +1,12 @@
 extends(src="layout.sgr")
   block(name="content")
-    aside
-      img(src="https://source.unsplash.com/random")
-      p caption here
     h1 About us
-    p Graphic homoeroticism? Does that mean they're going to get them out? Graphic homoeroticism? Does that mean they're going to get them out? It's my term for my time of the month. Oh. What time of the month? The weekend? I'll put this over here, with the rest of the fire. Shut up, do what I tell you, I'm not interested; these are just some of the things you'll be hearing if you answer this ad. I'm an idiot and I dont care about anyone but myself. P.S. No dogs! So, remember the new number! 0118 999! 88199, 9119 725! ... 3!
+    .team
+      img(src="https://source.unsplash.com/random/400x300")
+      p caption here
+    span(md).
+      Graphic homoeroticism? Does that mean they're going to get them out? Graphic homoeroticism? Does that mean they're going to get them out? It's my term for my time of the month. Oh. What time of the month? The weekend? I'll put this over here, with the rest of the fire. Shut up, do what I tell you, I'm not interested; these are just some of the things you'll be hearing if you answer this ad. I'm an idiot and I dont care about anyone but myself. P.S. No dogs! So, remember the new number! 0118 999! 88199, 9119 725! ... 3!
 
-    p They just toss us away like yesterday's jam. When I started Reynholm Industries, I had just two things in my possession: a dream and 6 million pounds. I'll put this over here, with the rest of the fire. Oh my God. I didn't even know Smarties made a cereal. They don't. It's just Smarties in a bowl with milk. It's like they're pally-wally with us when there's a problem with their printer, but once it's fixed... Dear Sir stroke Madam. Fire, exclamation mark. Fire, exclamation mark. Help me, exclamation mark. 123 Carrendon Road. Looking forward to hearing from you. All the best, Maurice Moss. 
+      They just toss us away like yesterday's jam. When I started Reynholm Industries, I had just two things in my possession: a dream and 6 million pounds. I'll put this over here, with the rest of the fire. Oh my God. I didn't even know Smarties made a cereal. They don't. It's just Smarties in a bowl with milk. It's like they're pally-wally with us when there's a problem with their printer, but once it's fixed... Dear Sir stroke Madam. Fire, exclamation mark. Fire, exclamation mark. Help me, exclamation mark. 123 Carrendon Road. Looking forward to hearing from you. All the best, Maurice Moss.
 
-    p Hello? I've had a bit of a tumble. I'm a 32 year old IT-man who works in a basement. Yes, I do the whole Lonely Hearts thing! Well that's easy to remember. 0118 999 88199 9119 725! ... 3! A gay musical, called Gay. That's quite gay. Gay musical? Aren't all musicals gay? This must be, like, the gayest musical ever. Yes! Yesterday's jam. That is what we are to them!... Actually, that doesn't work, as a thing, because, you know, jam lasts for ages. Graphic homoeroticism? Does that mean they're going to get them out.
+      Hello? I've had a bit of a tumble. I'm a 32 year old IT-man who works in a basement. Yes, I do the whole Lonely Hearts thing! Well that's easy to remember. 0118 999 88199 9119 725! ... 3! A gay musical, called Gay. That's quite gay. Gay musical? Aren't all musicals gay? This must be, like, the gayest musical ever. Yes! Yesterday's jam. That is what we are to them!... Actually, that doesn't work, as a thing, because, you know, jam lasts for ages. Graphic homoeroticism? Does that mean they're going to get them out.
