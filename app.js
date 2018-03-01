@@ -1,10 +1,11 @@
-const Wordpress = require('spike-wordpress')
+const wordpress = require('spike-wordpress')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const sugarml = require('sugarml')
 const sugarss = require('sugarss')
+const moment = require('moment')
 const env = process.env.SPIKE_ENV
 const locals = {}
 
@@ -13,7 +14,7 @@ module.exports = {
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   plugins: [
-    new Wordpress({
+    new wordpress({
       site: 'www.accessaa.co.uk',
       addDataTo: locals,
       posts: [
@@ -25,20 +26,40 @@ module.exports = {
           name: 'news',
           category: 'news',
           order: 'date',
+          transform: (news) => {
+            news.date = moment(news.date).format('LLL')
+            return news
+          },
           template: {
             path: 'views/article.sgr',
-            output: (item) => `posts/${item.slug}.html`
+            output: (item) => { return `news/${item.slug}.html` }
           }
         },
         {
           name: 'features',
           category: 'features',
-          order: 'date'
+          order: 'date',
+          transform: (features) => {
+            features.date = moment(features.date).format('LLL')
+            return features
+          },
+          template: {
+            path: 'views/article.sgr',
+            output: (item) => { return `features/${item.slug}.html` }
+          }
         },
         {
           name: 'blog',
           category: 'blog',
-          order: 'date'
+          order: 'date',
+          transform: (blog) => {
+            blog.date = moment(blog.date).format('LLL')
+            return blog
+          },
+          template: {
+            path: 'views/article.sgr',
+            output: (item) => { return `blogs/${item.slug}.html` }
+          }
         }
       ]
     })
