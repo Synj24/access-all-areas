@@ -41,10 +41,7 @@ module.exports = {
           order: 'date',
           transform: (features) => {
             features.date = moment(features.date).format('LLL')
-            return features
-          },
-          transform: (features) => {
-            features.excerpt = features.excerpt.replace('› Full Story', '');
+            features.excerpt = features.excerpt.replace('› Full Story', '')
             return features
           },
           template: {
