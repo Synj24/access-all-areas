@@ -12,7 +12,7 @@ const locals = {}
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: [ '**/article.sgr','**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   plugins: [
     new wordpress({
       site: 'www.accessaa.co.uk',
@@ -41,6 +41,10 @@ module.exports = {
           order: 'date',
           transform: (features) => {
             features.date = moment(features.date).format('LLL')
+            return features
+          },
+          transform: (features) => {
+            features.excerpt = features.excerpt.replace('› Full Story', '');
             return features
           },
           template: {
