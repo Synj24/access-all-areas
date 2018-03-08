@@ -8,8 +8,11 @@
   },
   "bugs": "https://github.com/synj24/access-all-areas/issues",
   "dependencies": {
+    "markdown-it": "^8.4.1",
+    "moment": "^2.20.1",
     "reshape-standard": "^3.0.0",
     "spike": "^2.2.1",
+    "spike-contentful": "^3.1.0",
     "spike-css-standards": "^3.0.0",
     "spike-js-standards": "^2.0.2",
     "spike-optimize": "^0.1.2",

@@ -1,4 +1,5 @@
 const wordpress = require('spike-wordpress')
+const contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
@@ -63,6 +64,23 @@ module.exports = {
           }
         }
       ]
+    }),
+    new contentful({
+      addDataTo: locals,
+      accessToken: 'f2bc9d5682a68b9db14c3a12141060c36ebdf3c35e5f91cd35292c0aebb166ac',
+      spaceId: 'xb19obi155ii',
+      contentTypes: [{
+        name: 'issues',
+        id: 'issues',
+        filters: {
+          limit: 12,
+          order: '-sys.createdAt'
+        },
+        transform: (issues) => {
+          issues.fields.publicationDate = moment(issues.fields.publicationDate).format('MMMM YYYY')
+          return issues
+        }
+      }]
     })
   ],
   reshape: htmlStandards({
