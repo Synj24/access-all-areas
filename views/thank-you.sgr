@@ -1,0 +1,14 @@
+extends(src="layout.sgr")
+  block(name="content")
+    p(md).
+      ## Thank you for your subscription
+
+      Your request has been received and information has been sent to you.
+
+      Please check your email address!
+
+      *IMPORTANT!*
+
+      To make sure that our mail reaches your inbox correctly and is not blocked by mistake,
+      please add our email address to your email address book and/or to "whitelist" (trusted senders):
+      _mail@mashmedia.net_

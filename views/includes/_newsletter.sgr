@@ -1,11 +1,14 @@
 .newsletter-widget
   h3 Sign up to our newsletter
   //these would do well with a flexbox https://philipwalton.github.io/solved-by-flexbox/demos/input-add-ons/
-  form
+  form(action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post")
     span
       label(for="name") Name:
-      input(type="text" id="name" name="user_name")
+      input(type="text" id="name" name="name")
       label(for="mail") Email:
-      input(type="email" id="mail" name="user_mail")
+      input(type="text" id="mail" name="email")
+      input(type="hidden" name="campaign_token" value="nDrq")
+	    input(type="hidden" name="thankyou_url" value="http://localhost:1111/thank-you")
+      input(input type="hidden" name="forward_data" value="")
     .button
-      button(type="submit") Submit
+      input(type="submit" value="Submit")
