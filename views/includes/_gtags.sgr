@@ -27,6 +27,7 @@ script.
        	addSize([1245, 600], [170, 980]).build();
     googletag.defineSlot('/43271057/AAA_Static_Pushdown', [[970, 150], [320, 50]], 'div-gpt-ad-1518104394203-0').defineSizeMapping(pushdownMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Leaderboard', [[728, 90], [320, 50]], 'div-gpt-ad-1518099474852-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
+    googletag.defineSlot('/43271057/AAA_Static_Leaderboard_2', [[728, 90], [320, 50]], 'div-gpt-ad-1521832548877-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Filmstrip', [300, 600], 'div-gpt-ad-1518099514073-0').defineSizeMapping(filmstripMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Left_Takeover', [170, 980], 'div-gpt-ad-1521829251016-0').defineSizeMapping(takeoverMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Right_Takeover', [170, 980], 'div-gpt-ad-1521829499958-0').defineSizeMapping(takeoverMap).addService(googletag.pubads());

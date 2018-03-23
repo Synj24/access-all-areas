@@ -1,0 +1,5 @@
+.g-ad-leaderboard
+  // /43271057/AAA_Static_Leaderboard_2
+  div#div-gpt-ad-1521832548877-0
+    script.
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521832548877-0'); });
