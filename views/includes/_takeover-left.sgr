@@ -1,0 +1,5 @@
+#takeover-ad-left
+  // /43271057/AAA_Static_Left_Takeover
+  div(id='div-gpt-ad-1521829251016-0' style='height:980px; width:170px;')
+  script.
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521829251016-0'); });
