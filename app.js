@@ -1,4 +1,4 @@
-const wordpress = require('spike-wordpress')
+const Records = require('spike-records')
 const contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
@@ -15,55 +15,54 @@ module.exports = {
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: [ '**/article.sgr','**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   plugins: [
-    new wordpress({
-      site: 'www.accessaa.co.uk',
+    new Records({
       addDataTo: locals,
-      posts: [
-        {
-          name: 'posts',
-          number: '10'
+      news: {
+        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=news&order_by=date',
+        transform: (news) => {
+          news.posts.forEach( element => {
+            element.date = moment(element.date).format('LLL')
+            return element
+          })
+          return news
         },
-        {
-          name: 'news',
-          category: 'news',
-          order: 'date',
-          transform: (news) => {
-            news.date = moment(news.date).format('LLL')
-            return news
-          },
-          template: {
-            path: 'views/article.sgr',
-            output: (item) => { return `news/${item.slug}.html` }
-          }
-        },
-        {
-          name: 'features',
-          category: 'features',
-          order: 'date',
-          transform: (features) => {
-            features.date = moment(features.date).format('LLL')
-            features.excerpt = features.excerpt.replace('› Full Story', '')
-            return features
-          },
-          template: {
-            path: 'views/article.sgr',
-            output: (item) => { return `features/${item.slug}.html` }
-          }
-        },
-        {
-          name: 'blog',
-          category: 'blog',
-          order: 'date',
-          transform: (blog) => {
-            blog.date = moment(blog.date).format('LLL')
-            return blog
-          },
-          template: {
-            path: 'views/article.sgr',
-            output: (item) => { return `blogs/${item.slug}.html` }
-          }
+        template: {
+          transform: (news) => { return news.posts },
+          path: 'views/article.sgr',
+          output: (news) => { return `news/${news.slug}.html`}
         }
-      ]
+      },
+      features: {
+        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=features&order_by=date',
+        transform: (features) => {
+          features.posts.forEach( element => {
+            element.date = moment(element.date).format('LLL')
+            return element
+          })
+          return features
+        },
+        template: {
+          transform: (features) => { return features.posts },
+          // features.excerpt = features.excerpt.replace('› Full Story', ''),
+          path: 'views/article.sgr',
+          output: (features) => { return `features/${features.slug}.html`}
+        }
+      },
+      blogs: {
+        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=blog&order_by=date',
+        transform: (blogs) => {
+          blogs.posts.forEach( element => {
+            element.date = moment(element.date).format('LLL')
+            return element
+          })
+          return blogs
+        },
+        template: {
+          transform: (blogs) => { return blogs.posts },
+          path: 'views/article.sgr',
+          output: (blogs) => { return `blogs/${blogs.slug}.html`}
+        }
+      }
     }),
     new contentful({
       addDataTo: locals,
