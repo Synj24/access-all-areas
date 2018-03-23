@@ -7,10 +7,10 @@ extends(src="layout.sgr")
       each(loop="issue in contentful.issues")
         .card
           a(href="{{ issue.fields.url }}")
+            p.title {{ issue.fields.title }}
+            p.date {{ issue.fields.publicationDate }}
             img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="209")
             // img(src="http://placehold.it/209x281", alt="")
-            p {{ issue.fields.title }}
-            p {{ issue.fields.publicationDate }}
       aside
         .calender
           p Hello ;)
