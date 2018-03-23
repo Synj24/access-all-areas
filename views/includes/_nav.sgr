@@ -6,9 +6,6 @@ nav
       a(href="/news") News
       a(href="/features") Features
       a(href="/blogs") Blogs
-      a(href="/interviews") Interviews
-      a(href="/analysis") Analysis
-      a(href="/events") Event Listings
       a(href="http://www.whitebook.co.uk/") White Book
       a(href="#menu-close") Close
       a(href="#menu") Menu
