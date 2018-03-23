@@ -13,7 +13,9 @@ html
     link(rel="stylesheet" href="/css/index.css")
     include(src="includes/_gtags.sgr")
   body
-    // include(src="includes/_pushdown.sgr")
+    include(src="includes/_takeover-left.sgr")
+    include(src="includes/_takeover-right.sgr")
+    include(src="includes/_pushdown.sgr")
     include(src="includes/_nav.sgr")
     .warning-message
       h3 Some features of this site are not supported in your browser
@@ -21,5 +23,6 @@ html
       block(name="content")
     include(src="includes/_footer.sgr")
 
-    block(name="javascript")
-      script(src="js/main.js" defer)
+    block(name='javascript')
+      // script window.locals = {{{ JSON.stringify(locals) }}}
+      script(src='js/main.js' defer)
