@@ -3,55 +3,26 @@ extends(src="layout.sgr")
     .g-label
       h4 Latest News
     .grid
-      .spot
-        img(src="http://placehold.it/482x181", alt="")
-        h2 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .card
-        img(src="http://placehold.it/231x128", alt="")
-        h3 title
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+      each(loop='post, i in news.posts')
+        if(condition='i == 1')
+          .spot
+            a(href="news/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="482" height="181")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
+        elseif(condition='i >= 2 && i <= 11')
+          .card
+            a(href="news/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="231" height="128")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
       aside
         .p-news-ad-filmstrip
-          img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
+          include(src="includes/_filmstrip.sgr")
         .issues
           h3 Latest Issues
-          img(src="http://placehold.it/142x190", alt="")
-          img(src="http://placehold.it/142x190", alt="")
+          each(loop='issue, i in contentful.issues')
+            if(condition='i < 2')
+              a(href="{{ issue.fields.url }}")
+                img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="142")
         include(src="includes/_newsletter.sgr")
