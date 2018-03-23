@@ -15,6 +15,7 @@ main
 
 a
   text-decoration: none
+  color: var(--dark)
 
 h1,
 h2,
@@ -23,6 +24,7 @@ h4,
 h5,
 h6
   font-family: var(--header)
+  font-weight: 100
   color: var(--dark)
 
 p,
@@ -37,7 +39,7 @@ h2
   font-size: 36px
 
 h3
-  font-size: 18px
+  font-size: 20px
 
 h4
   font-size: 14px
@@ -51,7 +53,7 @@ h4
     width: 128px
     background-color: var(--brown)
     color: var(--white)
-    line-height: 2.275em
+    line-height: 2.5em
     text-align: center
 
 .g-ad-leaderboard
@@ -68,3 +70,12 @@ h4
 #div-gpt-ad-1518094002519-0
   width: 300px
   height: 600px
+
+#takeover-ad-left,
+#takeover-ad-right
+  position: fixed
+
+#takeover-ad-left
+  transform: translate(-100%)
+#takeover-ad-right
+  transform: translate(1245px)
