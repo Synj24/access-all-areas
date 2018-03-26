@@ -35,7 +35,7 @@ extends(src="layout.sgr")
               h3 {{ post.title }}
               p {{ post.excerpt }}
       include(src="includes/_filmstrip.sgr")
-    include(src="includes/_leaderboard.sgr")
+    include(src="includes/_leaderboard-2.sgr")
     .g-label
       h4 Blogs
     .blogs.grid
