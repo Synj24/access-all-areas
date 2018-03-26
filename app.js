@@ -1,3 +1,4 @@
+const Rest = require('rest')
 const Records = require('spike-records')
 const contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
@@ -37,13 +38,13 @@ module.exports = {
         transform: (features) => {
           features.posts.forEach( element => {
             element.date = moment(element.date).format('LLL')
+            element.excerpt = element.excerpt.replace('› Full Story', '')
             return element
           })
           return features
         },
         template: {
           transform: (features) => { return features.posts },
-          // features.excerpt = features.excerpt.replace('› Full Story', ''),
           path: 'views/article.sgr',
           output: (features) => { return `features/${features.slug}.html`}
         }
