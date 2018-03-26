@@ -1,4 +1,3 @@
-const Rest = require('rest')
 const Records = require('spike-records')
 const contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
@@ -14,7 +13,7 @@ const locals = {}
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: [ '**/article.sgr','**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: [ '**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   plugins: [
     new Records({
       addDataTo: locals,
