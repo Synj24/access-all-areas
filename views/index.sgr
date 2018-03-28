@@ -5,7 +5,7 @@ extends(src="layout.sgr")
       h4 Latest News
     .news.grid
       each(loop='post, i in news.posts')
-        if(condition='i == 1')
+        if(condition='i == 0')
           .spot
             a(href="news/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
@@ -21,13 +21,13 @@ extends(src="layout.sgr")
       h4 Features
     .features.grid
       each(loop='post, i in features.posts')
-        if(condition='i == 2 || i == 3')
+        if(condition='i == 1 || i == 2')
           .card
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
               time(datetime=" {{ post.date }} ") {{ post.date }}
               h3 {{ post.title }}
-        if(condition='i == 1')
+        if(condition='i == 0')
           .spot
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
@@ -39,7 +39,7 @@ extends(src="layout.sgr")
     .g-label
       h4 Blogs
     .blogs.grid
-      each(loop='post, i in blogs.posts')
+      each(loop='post, i in blogs')
         if(condition='i < 4')
           .card
             a(href="blogs/{{ post.slug }}.html")
