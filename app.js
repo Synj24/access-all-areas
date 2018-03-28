@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+const fetch = require('node-fetch')
 const Records = require('spike-records')
 const contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
@@ -9,6 +12,37 @@ const sugarss = require('sugarss')
 const moment = require('moment')
 const env = process.env.SPIKE_ENV
 const locals = {}
+
+function getPostsOfType(category) {
+  return new Promise((resolve, reject) => {
+    const getData = (category, number = 0, page = 0) =>
+      fetch(`https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?category=${category}&number=${number}&page=${page}&order_by=date`)
+        .then(res => res.json())
+
+    const found = (category) => getData(category).then(json => json.found);
+
+    found(category)
+      .then((value) => {
+          return Math.ceil(value/100);
+      })
+      .then((callsToMake) => {
+          let tasks = [];
+          for (i = 0; i < callsToMake; i++) {
+              tasks.push(getData(category, 100, i)) //<--- Fill tasks array with promises that will eventually return a value
+          }
+          return Promise.all(tasks); //<-- Run these tasks in parallel and return an array of the resolved values of the N Promises.
+      })
+      .then((arrOfPosts) => {
+          let allPosts = [];
+          for(var elem of arrOfPosts)
+              allPosts = allPosts.concat(elem.posts);
+          return resolve(allPosts);
+      }).catch((err) => {
+          console.log(err);
+          reject(err);
+      })
+  })
+}
 
 module.exports = {
   devtool: 'source-map',
@@ -49,16 +83,15 @@ module.exports = {
         }
       },
       blogs: {
-        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=blog&order_by=date',
+        callback: getPostsOfType.bind(this, 'blog'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=blog&order_by=date',
         transform: (blogs) => {
-          blogs.posts.forEach( element => {
+          blogs.forEach( element => {
             element.date = moment(element.date).format('LLL')
             return element
           })
           return blogs
         },
         template: {
-          transform: (blogs) => { return blogs.posts },
           path: 'views/article.sgr',
           output: (blogs) => { return `blogs/${blogs.slug}.html`}
         }
@@ -66,7 +99,7 @@ module.exports = {
     }),
     new contentful({
       addDataTo: locals,
-      accessToken: 'f2bc9d5682a68b9db14c3a12141060c36ebdf3c35e5f91cd35292c0aebb166ac',
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       spaceId: 'xb19obi155ii',
       contentTypes: [{
         name: 'issues',
