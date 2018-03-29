@@ -1,0 +1,37 @@
+//this div is a workaround as spike-page-id isn't working on templates currently
+//with v1.1.0, once this is fixed this can be changed to main#article
+.main-article
+  display: flex
+  padding: 5px
+  & .title
+    margin: 2px
+  & article,
+    max-width: 945px
+  & p.date
+    margin: 5px 5px 15px 5px
+    padding: 5px
+    background-color: var(--dark)
+    color: var(--white)
+    width: fit-content
+  & img.featured
+    max-width: 100%
+    padding: 5px
+  & aside
+    padding: 5px
+  & span.content
+    & *
+      margin: 5px
+    & ul,
+    & ol
+      font-size: 14px
+      margin-left: 30px
+  & .author
+    margin-top: 35px
+    & *
+      margin: 3px
+    & img.avatar
+      width: 50px
+    & a.email
+      display: flex
+      & i.fa
+        margin-right: 3px
