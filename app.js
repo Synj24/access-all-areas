@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const _ = require('lodash');
 const fetch = require('node-fetch')
 const Records = require('spike-records')
 const contentful = require('spike-contentful')
@@ -36,7 +36,7 @@ function getPostsOfType(category) {
           let allPosts = [];
           for(var elem of arrOfPosts)
               allPosts = allPosts.concat(elem.posts);
-          return resolve(allPosts);
+          return resolve(_.uniqWith(allPosts, _.isEqual));// this isn't working as expected :(
       }).catch((err) => {
           console.log(err);
           reject(err);
@@ -52,24 +52,25 @@ module.exports = {
     new Records({
       addDataTo: locals,
       news: {
-        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=news&order_by=date',
+        callback: getPostsOfType.bind(this, 'news'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=100&category=news&order_by=date',
         transform: (news) => {
-          news.posts.forEach( element => {
+          news.forEach( element => {
+            element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
           })
           return news
         },
         template: {
-          transform: (news) => { return news.posts },
           path: 'views/article.sgr',
           output: (news) => { return `news/${news.slug}.html`}
         }
       },
       features: {
-        url: 'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=features&order_by=date',
+        callback: getPostsOfType.bind(this, 'features'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=100&category=features&order_by=date',
         transform: (features) => {
-          features.posts.forEach( element => {
+          features.forEach( element => {
+            element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             element.excerpt = element.excerpt.replace('› Full Story', '')
             return element
@@ -77,7 +78,6 @@ module.exports = {
           return features
         },
         template: {
-          transform: (features) => { return features.posts },
           path: 'views/article.sgr',
           output: (features) => { return `features/${features.slug}.html`}
         }
@@ -86,6 +86,7 @@ module.exports = {
         callback: getPostsOfType.bind(this, 'blog'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=blog&order_by=date',
         transform: (blogs) => {
           blogs.forEach( element => {
+            element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
           })
