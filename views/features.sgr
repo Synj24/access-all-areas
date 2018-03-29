@@ -3,7 +3,7 @@ extends(src="layout.sgr")
     .g-label
       H4 Features
     .grid
-      each(loop='post, i in features.posts')
+      each(loop='post, i in features')
         if(condition='i == 1')
           .spot
             a(href="features/{{ post.slug }}.html")

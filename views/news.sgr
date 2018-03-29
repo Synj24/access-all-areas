@@ -3,7 +3,7 @@ extends(src="layout.sgr")
     .g-label
       h4 Latest News
     .grid
-      each(loop='post, i in news.posts')
+      each(loop='post, i in news')
         if(condition='i == 1')
           .spot
             a(href="news/{{ post.slug }}.html")
