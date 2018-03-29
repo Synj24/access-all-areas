@@ -57,13 +57,17 @@ h4
     text-align: center
 
 .g-ad-leaderboard
-  width: 728px
+  display: grid
+  justify-content: center
+  @media(min-width:728px)
+    width: 728px
   height: 90px
   margin: 14px auto
 
 .g-ad-pushdown
   background-color: var(--dark)
-  height: 150px
+  @media(min-width:970px)
+    height: 150px
   display: grid
   justify-content: center
 
