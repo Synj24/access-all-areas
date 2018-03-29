@@ -1,3 +1,7 @@
 extends(src="layout.sgr")
   block(name="content")
-    include(src="includes/_newsletter.sgr")
+    .widget-container
+      .newsletter-image
+        img(src="https://source.unsplash.com/IAKIkREkRzY/350x200")
+        p(md) Photo by [_Gemma Evans_](https://stayandroam.blog/)
+      include(src="includes/_newsletter.sgr")
