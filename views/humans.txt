@@ -1,0 +1,20 @@
+            *-*,
+        ,*\/|`| \
+        \'  | |'| *,
+         \ `| | |/ )
+          | |'| , /
+          |'| |, /
+        __|_|_|_|__
+       [___________]
+        \         /
+         \       /
+          |_____|
+
+Designed and developed by Matthew Daryl Gregory.
+http://matthewdarylgregory.com/
+
+This is a hybrid-static site compiled using spike.
+https://www.spike.cf/
+
+Many thanks to all the loverly people at static-dev.slack.com
+for all your help and advice.
