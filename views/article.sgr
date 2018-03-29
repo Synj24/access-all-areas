@@ -1,25 +1,18 @@
 extends(src="layout.sgr")
   block(name="content")
-    img(src="https://source.unsplash.com/random/733x427")
-    // img(src="{{ item.featured_image }}")
-    h1 on hold for now
-    // h1 {{ item.title }}
-    date 1 Jan 1979
-    article
-      p Skate ipsum dolor sit amet, rocket air birdie crail grab casper slide blunt gap lien air Ron Chapman. Cess slide transfer lipslide Bill Danforth alley oop ledge smith grind full-cab. Ollie north ollie backside pogo flypaper Eight Dayz 540 noseblunt slide. Frontside ollie coffin skate or die mute-air hanger durometer. 270 g-turn coffin 360 frigid air NoMeansNo steps nose bump. Bank acid drop risers hospital flip grab ho-ho concave Chris Haslam. Axle set grab disaster deck pogo coffin stalefish. Judo air ollie north frontside death box hanger shinner Christ air. Jeremy Wray 540 nose pump tail hang-up no comply coffin. Bluntslide boneless Saran Wrap Danny Way death box baseplate airwalk goofy footed. Madonna lien air coper rock and roll invert spine layback slide.
-
-      p 180 darkslide crail grab risers tic-tac. Gap nose-bump sketchy coper frigid air. Finger flip indy grab Primo slide half-cab mute-air. Feeble indy grab hand rail judo air darkslide The Faction. Blunt pogo Kevin Harris lien air late Steve Steadham. Rail slide 50-50 tic-tac steps freestyle. Nose grab street downhill locals g-turn Chris Haslam. Wes Humpston gnarly betty hospital flip hanger tuna-flip. Skate or die rock and roll China Banks backside full pipe bluntslide. Supersonic Skate Camp helipop manual casper ledge nose bump. Pump kingpin varial kick-nose 180.
-
-      p Late Saran Wrap Kris Markovich cab flip casper no comply. Tuna-flip switch lien air regular footed ledge Steve Chumney. Crailtap locals invert skater mini ramp. Soul skate coper full pipe Neal Hendrix bigspin axle set. Crail grab poseur ollie opposite footed nose blunt. Nosebone Wes Humpston acid drop hand rail powerslide frigid air. Crailtap crail slide axle set Upland hard flip lip. Method air lipslide indy grab 50-50 steps. Wall ride freestyle trucks mongo boned out. Boned out bail lipslide chicken wing carve. Airwalk kickflip ho-ho durometer Kevin Jarvis darkslide. Roll-in bail kick-nose frontside air skater Gullwing. Face plant Kevin Harris Bare Cover wax grind hardware.
-
-      p Opposite footed blunt durometer Arto Saari powerslide. Disaster mongo pop shove-it full pipe H-Street. Rip grip tailslide dude pogo Andy Levy. Lipslide mute-air nose-bump launch ramp. Primo slide rad Video Days tuna-flip disaster. Masonite no comply flail downhill. Skater bigspin cess slide handplant Chico Brenes. Pivot shinner speed wobbles Japan air. Stoked Girl betty salad grind carve. Ledge fast plant Mike Vallely feeble casper slide. Street Streetstyle in Tempe nose blunt axle set kickturn. Manual casper slide Burnside no comply nose bump.
-
-      p Kidney cess slide Baker soul skate Kevin Harris body varial ollie north. Crailtap tailslide 720 front foot impossible rock and roll Schmitt Stix cess slide. Cess slide drop in risers cab flip Christ air Mike Vallely 900. Judo air rip grip bruised heel ollie coping aerial. Pump air regular footed shoveit drop in casper. Hurricane mini ramp slob air crail slide nose hard flip. Spine late nose bump crail grab hang up downhill. Nosebone stalefish ollie hole face plant street risers. Nose bump feeble nose grab tail downhill bearings Spike Jonze.
-      p Varial 1080 goofy footed death box air kickturn Kris Markovich skate key. Flail 180 masonite gap wheels late casper Lester Kasai. Alley oop opposite footed poseur shinner sponsored coper downhill. Dudesblood soul skate fakie goofy footed bigspin hang ten coper nosepicker. Masonite kick-nose wall ride Gullwing boardslide bluntslide varial ho-ho. Bone air pivot grind rail mute-air rip grip nose bump. Kickturn ollie north fakie out birdie pop shove-it hospital flip boned out. Shoveit hardware slide fakie out kickflip durometer pop shove-it. Shoveit tailslide handplant Bam Margera hospital flip crailtap kickflip boned out. 1080 bearings flypaper darkslide transfer Shorty's 900 g-turn. Shinner 50-50 opposite footed melancholy bluntslide grind boned out. Neil Blender rip grip launch ramp egg plant lip masonite gnar bucket ho-ho. Ledge egg plant indy grab Dylan Rieder pressure flip dude pool late.
-    .author
-      img(src="https://source.unsplash.com/collection/787231/94x94")
-      h3 Author name
-      p author job role
-      i.fa.fa-envelope(aria-hidden="true")
-      p author@mashmedia.net
-    include(src="includes/_filmstrip.sgr")
+    .main-article
+      article
+        img.featured(src="{{ item.featured_image }}")
+        h2.title {{ item.title }}
+        p.date {{ item.date }}
+        span.content {{ item.content }}
+        .author
+          img.avatar(src="{{ item.author.avatar_URL }}")
+          h3 {{ item.author.name }}
+          // might need to set a data source for this
+          if(condition="item.author.name === 'Tom Hall'")
+            p Editor
+            a.email(href="mailto:thall@mashmedia.net")
+              i.fa.fa-envelope(aria-hidden="true")
+              p thall@mashmedia.net
+      include(src="includes/_filmstrip.sgr")
