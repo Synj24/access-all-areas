@@ -7,6 +7,8 @@
 .card
   & img
     object-fit: cover
+  & h3
+    margin-top: 5px
 
 .news,
 .features
@@ -14,10 +16,12 @@
     & img
       @media (min-width: 1245px)
         width: 615px
-        height: 376px
+        height: 389px
       @media (min-width: 651px) and (max-width: 1244px)
         height: 250px
   & .card
+    @media (max-width: 650px)
+      padding: 25px 0
     & img
       @media (min-width: 1245px)
         width: 300px
@@ -34,6 +38,8 @@
         height: 300px
 .blogs
   & .card
+    @media (max-width: 650px)
+      padding: 25px 0
     & img
       @media (min-width: 1245px)
         width: 300px
