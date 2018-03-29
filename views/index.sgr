@@ -4,7 +4,7 @@ extends(src="layout.sgr")
     .g-label
       h4 Latest News
     .news.grid
-      each(loop='post, i in news.posts')
+      each(loop='post, i in news')
         if(condition='i == 0')
           .spot
             a(href="news/{{ post.slug }}.html")
@@ -20,7 +20,7 @@ extends(src="layout.sgr")
     .g-label
       h4 Features
     .features.grid
-      each(loop='post, i in features.posts')
+      each(loop='post, i in features')
         if(condition='i == 1 || i == 2')
           .card
             a(href="features/{{ post.slug }}.html")
