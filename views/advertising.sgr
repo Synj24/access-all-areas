@@ -2,8 +2,8 @@ extends(src="layout.sgr")
   block(name="content")
     h1 Advertising
     .graphic
-      img(src="https://source.unsplash.com/random/400x300")
-      p caption here
+      img(src="https://source.unsplash.com/h9gaTYBxEwA/400x300")
+      p(md) Photo by [_Marion Michele_](https://marionmichele.com/)
     span(md).
       ## Circulation & Advertising
       _Access All Areas_ has been the UK event industry’s leading magazine for more than 21 years. It’s read by more than 23,500 decision makers, the people that need to know about your products and services, and the print/digital circulation is continually updated to guarantee advertisers a targeted, quality audience.
