@@ -8,6 +8,8 @@
   },
   "bugs": "https://github.com/synj24/access-all-areas/issues",
   "dependencies": {
+    "dotenv": "^5.0.1",
+    "lodash": "^4.17.5",
     "markdown-it": "^8.4.1",
     "moment": "^2.20.1",
     "node-fetch": "^2.1.2",
