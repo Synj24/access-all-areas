@@ -55,6 +55,7 @@ module.exports = {
         callback: getPostsOfType.bind(this, 'news'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=100&category=news&order_by=date',
         transform: (news) => {
           news.forEach( element => {
+            element.slug = element.slug.replace(/[^ -~]+/g, "")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
@@ -70,6 +71,7 @@ module.exports = {
         callback: getPostsOfType.bind(this, 'features'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=100&category=features&order_by=date',
         transform: (features) => {
           features.forEach( element => {
+            element.slug = element.slug.replace(/[^ -~]+/g, "")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             element.excerpt = element.excerpt.replace('› Full Story', '')
@@ -86,6 +88,7 @@ module.exports = {
         callback: getPostsOfType.bind(this, 'blog'), //'https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?number=12&category=blog&order_by=date',
         transform: (blogs) => {
           blogs.forEach( element => {
+            element.slug = element.slug.replace(/[^ -~]+/g, "")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
