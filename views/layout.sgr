@@ -19,6 +19,10 @@ html
     include(src="includes/_nav.sgr")
     .warning-message
       h3 Some features of this site are not supported in your browser
+      p why not try
+        a(href="https://www.google.com/chrome/") chrome
+        | or
+        a(href="https://www.mozilla.org/en-GB/firefox/new/") firefox
     main(role="main" id="{{ pageId }}")
       block(name="content")
     include(src="includes/_footer.sgr")
