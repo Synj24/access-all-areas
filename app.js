@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ silent: true });
 const _ = require('lodash');
 const fetch = require('node-fetch')
 const Records = require('spike-records')
