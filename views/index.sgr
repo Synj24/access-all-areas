@@ -9,14 +9,16 @@ extends(src="layout.sgr")
           .spot
             a(href="news/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
-              time(datetime=" {{ post.date }} ") {{ post.date }}
-              h3 {{ post.title }}
+              .g-text
+                time(datetime=" {{ post.date }} ") {{ post.date }}
+                h3 {{ post.title }}
         elseif(condition='i < 5')
           .card
             a(href="news/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
-              time(datetime=" {{ post.date }} ") {{ post.date }}
-              h3 {{ post.title }}
+              .g-text
+                time(datetime=" {{ post.date }} ") {{ post.date }}
+                h3 {{ post.title }}
     .g-label
       h4 Features
     .features.grid
@@ -25,15 +27,17 @@ extends(src="layout.sgr")
           .card
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
-              time(datetime=" {{ post.date }} ") {{ post.date }}
-              h3 {{ post.title }}
+              .g-text
+                time(datetime=" {{ post.date }} ") {{ post.date }}
+                h3 {{ post.title }}
         if(condition='i == 0')
           .spot
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
-              time(datetime=" {{ post.date }} ") {{ post.date }}
-              h3 {{ post.title }}
-              p {{ post.excerpt }}
+              .g-text
+                time(datetime=" {{ post.date }} ") {{ post.date }}
+                h3 {{ post.title }}
+                p {{ post.excerpt }}
       include(src="includes/_filmstrip.sgr")
     include(src="includes/_leaderboard-2.sgr")
     .g-label
@@ -44,5 +48,6 @@ extends(src="layout.sgr")
           .card
             a(href="blogs/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="")
-              time(datetime=" {{ post.date }} ") {{ post.date }}
-              h3 {{ post.title }}
+              .g-text
+                time(datetime=" {{ post.date }} ") {{ post.date }}
+                h3 {{ post.title }}
