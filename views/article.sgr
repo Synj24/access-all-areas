@@ -5,8 +5,9 @@ extends(src="layout.sgr")
         img.featured(src="{{ item.featured_image }}")
         h2.title {{ item.title }}
         p.date {{ item.date }}
-        a.twitter-share-button(href="https://twitter.com/intent/tweet?text={{ item.title }}&url=http://www.accessaa.co.uk/{{ item.slug }}") Tweet
-        script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+        .g-social-shares
+          a.twitter-share-button(href="https://twitter.com/intent/tweet?text={{ item.title }}&url=http://www.accessaa.co.uk/{{ item.slug }}") Tweet
+          script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
         span.content {{ item.content }}
         .author
           img.avatar(src="{{ item.author.avatar_URL }}")
