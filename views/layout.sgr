@@ -16,16 +16,17 @@ html
     include(src="includes/_takeover-left.sgr")
     include(src="includes/_takeover-right.sgr")
     include(src="includes/_pushdown.sgr")
-    include(src="includes/_nav.sgr")
-    .warning-message
-      h3.
-        Were sorry but some features of this site are not supported in your browser
-        you might want to try one of these:
-      a(href="https://www.google.com/chrome/"): i.fa.fa-chrome(aria-hidden="true") chrome
-      a(href="https://www.mozilla.org/en-GB/firefox/new/"): i.fa.fa-firefox(aria-hidden="true") firefox
-    main(role="main" id="{{ pageId }}")
-      block(name="content")
-    include(src="includes/_footer.sgr")
+    .g-content-container
+      include(src="includes/_nav.sgr")
+      .warning-message
+        h3.
+          Were sorry but some features of this site are not supported in your browser
+          you might want to try one of these:
+        a(href="https://www.google.com/chrome/"): i.fa.fa-chrome(aria-hidden="true") chrome
+        a(href="https://www.mozilla.org/en-GB/firefox/new/"): i.fa.fa-firefox(aria-hidden="true") firefox
+      main(role="main" id="{{ pageId }}")
+        block(name="content")
+      include(src="includes/_footer.sgr")
 
     block(name='javascript')
       // script window.locals = {{{ JSON.stringify(locals) }}}
