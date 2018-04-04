@@ -123,6 +123,7 @@ module.exports = {
     root: 'views',
     parser: sugarml,
     locals: (ctx) => Object.assign(locals, {pageId: pageId(ctx), foo: 'bar' }),
+    retext: []
     // minifying html is breaking whitespace in footer
     // minify: env === 'production'
   }),
