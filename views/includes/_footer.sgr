@@ -39,4 +39,9 @@ footer
     a(href="/contact") Contact us
   .license
     p Made with &#9730; in London
-    a(href="http://www.mashmedia.net") &copy;Mash Media Group Limited 2017
+    a(href="http://www.mashmedia.net")
+      p
+        | &copy; &nbsp;
+        script(type="text/javascript").
+          document.write(new Date().getFullYear())
+        | &nbsp; Mash Media Group Limited
