@@ -56,6 +56,7 @@ module.exports = {
         transform: (news) => {
           news.forEach( element => {
             element.slug = element.slug.toLowerCase().replace(/[^0-9a-z-]/g,"")
+            element.content = element.content.replace(/’/g, "'")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
@@ -72,6 +73,7 @@ module.exports = {
         transform: (features) => {
           features.forEach( element => {
             element.slug = element.slug.toLowerCase().replace(/[^0-9a-z-]/g,"")
+            element.content = element.content.replace(/’/g, "'")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             element.excerpt = element.excerpt.replace('› Full Story', '')
@@ -89,6 +91,7 @@ module.exports = {
         transform: (blogs) => {
           blogs.forEach( element => {
             element.slug = element.slug.toLowerCase().replace(/[^0-9a-z-]/g,"")
+            element.content = element.content.replace(/’/g, "'")
             element.content = element.content.replace(/[^ -~]+/g, "")
             element.date = moment(element.date).format('LLL')
             return element
