@@ -16,7 +16,7 @@ html
   body
     include(src="includes/_takeover-left.sgr")
     include(src="includes/_takeover-right.sgr")
-    include(src="includes/_pushdown.sgr")
+    // include(src="includes/_pushdown.sgr")
     .g-content-container
       include(src="includes/_nav.sgr")
       .warning-message
