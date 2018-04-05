@@ -2,6 +2,23 @@ footer
   .social
     a(href="https://twitter.com/Access_AA")i.fa.fa-twitter(aria-hidden="true")
     a(href="https://www.instagram.com/access_aa/")i.fa.fa-instagram(aria-hidden="true")
+  .info
+    h3 Information
+    a(href="/issues") Issues
+    // a(href="/newsletter") Newsletter
+    a(href="/about") About us
+    a(href="/advertising") Advertising
+    a(href="/contact") Contact us
+  .subscribe
+    a(href="/subscribe")
+      img(src="/img/subscribe-banner-light.png")
+  .magazine
+    h3 Magazine Subscription
+    p For more infomation on our free magazine subscription contact or to report a change of address contact circulation:
+    p.white-space
+      | Kayode Adedeji
+      | T: 020 8481 1122
+      | circulation@mashmedia.net
   .contact
     h3 Contact
     address
@@ -17,26 +34,10 @@ footer
       | T: 020 8481 1122 (Sales)
       | Sales director
       | jlinin@mashmedia.net
-  .magazine
-    h3 Magazine Subscription
-    p For more infomation on our free magazine subscription contact or to report a change of address contact circulation:
-    p.white-space
-      | Kayode Adedeji
-      | T: 020 8481 1122
-      | circulation@mashmedia.net
-    a(href="/subscribe")
-      img(src="/img/subscribe-banner-light.png")
-  .newsletter
-    h3 Newsletter
-    p Sign up for our email newsletter and stay updated on all our latest storys and features
-    include(src="includes/_newsletter.sgr")
-  .info
-    h3 Information
-    a(href="/issues") Issues
-    a(href="/newsletter") Newsletter
-    a(href="/about") About us
-    a(href="/advertising") Advertising
-    a(href="/contact") Contact us
+  // .newsletter
+  //   h3 Newsletter
+  //   p Sign up for our email newsletter and stay updated on all our latest storys and features
+  //   include(src="includes/_newsletter.sgr")
   .license
     p Made with &#9730; in London
     a(href="http://www.mashmedia.net")
