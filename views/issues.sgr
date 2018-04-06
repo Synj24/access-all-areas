@@ -12,6 +12,6 @@ extends(src="layout.sgr")
             img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="209")
             // img(src="http://placehold.it/209x281", alt="")
       aside
-        include(src="includes/_newsletter.sgr")
-          .p-news-ad-filmstrip
-            img(src="http://placehold.it/300x600/969696/CCCCCC?text=Filmstrip", alt="")
+        // include(src="includes/_newsletter.sgr")
+        .p-news-ad-filmstrip
+          include(src="includes/_filmstrip.sgr")
