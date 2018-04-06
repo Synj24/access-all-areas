@@ -1,0 +1,31 @@
+extends(src="layout.sgr")
+  block(name="content")
+    .g-label
+      H4 Features
+    .grid
+      each(loop='post, i in features')
+        if(condition='i == 1+104')
+          .spot
+            a(href="features/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="482" height="181")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
+        elseif(condition='i >= 2+104 && i < 52+104')
+          .card
+            a(href="features/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="231" height="128")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
+      // aside
+      //   .p-news-ad-filmstrip
+      //     include(src="includes/_filmstrip.sgr")
+      //   .issues
+      //     h3 Latest Issues
+      //     each(loop='issue, i in contentful.issues')
+      //       if(condition='i < 2')
+      //         a(href="{{ issue.fields.url }}")
+      //           img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="142")
+      //   include(src="includes/_newsletter.sgr")
+    .g-view-all
+      a(href="/features-page-2") Previous
+      a(href="/features-page-4") Next

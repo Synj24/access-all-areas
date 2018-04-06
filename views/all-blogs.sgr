@@ -1,0 +1,28 @@
+extends(src="layout.sgr")
+  block(name="content")
+    .g-label
+      h4 Blogs
+    .grid
+      each(loop='post, i in blogs')
+        if(condition='i == 1')
+          .spot
+            a(href="blogs/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="482" height="181")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
+        elseif(condition='i >= 2')
+          .card
+            a(href="blogs/{{ post.slug }}.html")
+              img(src="{{post.featured_image}}", alt="" width="231" height="128")
+              time(datetime=" {{ post.date }} ") {{ post.date }}
+              h3 {{ post.title }}
+      // aside
+      //   .p-news-ad-filmstrip
+      //     include(src="includes/_filmstrip.sgr")
+      //   .issues
+      //     h3 Latest Issues
+      //     each(loop='issue, i in contentful.issues')
+      //       if(condition='i < 2')
+      //         a(href="{{ issue.fields.url }}")
+      //           img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="142")
+      //   include(src="includes/_newsletter.sgr")

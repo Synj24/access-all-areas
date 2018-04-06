@@ -27,4 +27,6 @@ extends(src="layout.sgr")
             if(condition='i < 2')
               a(href="{{ issue.fields.url }}")
                 img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="142")
-        include(src="includes/_newsletter.sgr")
+        // include(src="includes/_newsletter.sgr")
+    .g-view-all
+      a(href="/features-page-1") View all
