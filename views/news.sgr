@@ -29,4 +29,4 @@ extends(src="layout.sgr")
                 img(src="{{ issue.fields.cover.fields.file.url }}", alt="" width="142")
         // include(src="includes/_newsletter.sgr")
     .g-view-all
-      a(href="all-news") View all
+      a(href="/news-page-1") View all
