@@ -4,13 +4,13 @@ extends(src="layout.sgr")
       H4 Features
     .grid
       each(loop='post, i in features')
-        if(condition='i == 1+156')
+        if(condition='i == 157')
           .spot
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="" width="482" height="181")
               time(datetime=" {{ post.date }} ") {{ post.date }}
               h3 {{ post.title }}
-        elseif(condition='i >= 2+156 && i < 52+156')
+        elseif(condition='i >= 158 && i < 208')
           .card
             a(href="features/{{ post.slug }}.html")
               img(src="{{post.featured_image}}", alt="" width="231" height="128")
