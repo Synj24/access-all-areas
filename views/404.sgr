@@ -5,5 +5,5 @@ extends(src="layout.sgr")
         h1 Error 404
         h3 Page not found
         abbr(title="But shaking its all i know!")
-          img(src="img/404-dude-dancing.gif" alt="tiny question mark-dude shaking it")
+          img(src="/img/404-dude-dancing.gif" alt="tiny question mark-dude shaking it")
         p Your not supposed to be here!
