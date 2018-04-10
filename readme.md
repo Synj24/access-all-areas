@@ -1,4 +1,4 @@
-![Access All Areas](assets/img/logo.svg)
+# Access All Areas
 
 A new site I built for the outdoor event publication _Access All Areas_.
 
@@ -11,3 +11,5 @@ The site uses the wordpress rest api v1 to fetch content from the old site which
 - clone this repo down and `cd` into the folder
 - run `npm install`
 - run `spike watch` or `spike compile`
+
+![Dancing dude](assets\img\404-dude-dancing.gif)
