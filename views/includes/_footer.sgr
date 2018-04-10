@@ -5,7 +5,7 @@ footer
   .info
     h3 Information
     a(href="/issues") Issues
-    // a(href="/newsletter") Newsletter
+    a(href="/subscribe") Newsletter
     a(href="/about") About us
     a(href="/advertising") Advertising
     a(href="/contact") Contact us
