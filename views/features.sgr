@@ -21,7 +21,7 @@ extends(src="layout.sgr")
       aside
         .p-news-ad-filmstrip
           include(src="includes/_filmstrip.sgr")
-        .issues
+        .g-issues
           h3 Latest Issues
           each(loop='issue, i in contentful.issues')
             if(condition='i < 2')
