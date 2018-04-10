@@ -16,7 +16,7 @@ const locals = {}
 function getPostsOfType(category) {
   return new Promise((resolve, reject) => {
     const getData = (category, number = 0, page = 0) =>
-      fetch(`https://public-api.wordpress.com/rest/v1/sites/www.accessaa.co.uk/posts?category=${category}&number=${number}&page=${page}&order_by=date`)
+      fetch(`https://public-api.wordpress.com/rest/v1/sites/content.accessaa.co.uk/posts?category=${category}&number=${number}&page=${page}&order_by=date`)
         .then(res => res.json())
 
     const found = (category) => getData(category).then(json => json.found);
