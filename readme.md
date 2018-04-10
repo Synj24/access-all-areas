@@ -12,4 +12,4 @@ The site uses the wordpress rest api v1 to fetch content from the old site which
 - run `npm install`
 - run `spike watch` or `spike compile`
 
-![Dancing dude](assets\img\404-dude-dancing.gif)
+![Dancing dude](assets/img/404-dude-dancing.gif)
