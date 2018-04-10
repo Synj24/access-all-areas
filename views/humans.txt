@@ -18,3 +18,6 @@ https://www.spike.cf/
 
 Many thanks to all the loverly people at static-dev.slack.com
 for all your help and advice.
+
+This project is open source and up on github.
+https://github.com/Synj24/access-all-areas
