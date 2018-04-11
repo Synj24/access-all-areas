@@ -1,0 +1,20 @@
+extends(src="layout.sgr")
+  block(name="content")
+    div#app
+    script(src="//production-evvnt-plugin-herokuapp-com.global.ssl.fastly.net/evvnt_discovery_plugin.js")
+    script.
+      require("evvnt/discovery_plugin").init({
+        api_key: "accessallareaspub",
+        publisher_id: 5407,
+        sandbox: false,
+        discovery: {
+          element: "#app",
+          detail_page_enabled: true,
+          height: "1000px"
+        },
+        submission: {
+         element: "#discovery_plugin",
+         partner_name: "Access All Areas",
+         text: "Submit An Event"
+        }
+      });
