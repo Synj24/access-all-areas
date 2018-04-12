@@ -1,5 +1,6 @@
 extends(src="layout.sgr")
   block(name="content")
+    include(src="includes/_leaderboard.sgr")
     .main-article
       article
         img.featured(src="{{ item.featured_image }}")
@@ -18,4 +19,5 @@ extends(src="layout.sgr")
             a.email(href="mailto:thall@mashmedia.net")
               i.fa.fa-envelope(aria-hidden="true")
               p thall@mashmedia.net
+        include(src="includes/_leaderboard-2.sgr")
       include(src="includes/_filmstrip.sgr")
