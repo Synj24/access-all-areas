@@ -25,6 +25,9 @@ html
           you might want to try one of these:
         a(href="https://www.google.com/chrome/"): i.fa.fa-chrome(aria-hidden="true") chrome
         a(href="https://www.mozilla.org/en-GB/firefox/new/"): i.fa.fa-firefox(aria-hidden="true") firefox
+        p
+          |  Alternatively you can still view and older version of this site at
+          a(href="http://content.accessaa.co.uk/")  content.accessaa.co.uk
       main(role="main" id="{{ pageId }}")
         block(name="content")
       include(src="includes/_footer.sgr")
