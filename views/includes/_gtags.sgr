@@ -22,7 +22,9 @@ script.
     	// smartphone
        	addSize([0, 0], [320, 50]).
     	// tablets
-       	addSize([970, 150], [970, 150]).build();
+       	addSize([980, 690], [970, 150]).
+      // desktop
+        addSize([1245, 150], [1245, 150]).build();
     var filmstripMap = googletag.sizeMapping().
     	// smartphone
        	addSize([0, 0], []).
@@ -33,7 +35,7 @@ script.
        	addSize([0, 0], []).
     	// tablets
        	addSize([1245, 600], [170, 980]).build();
-    googletag.defineSlot('/43271057/AAA_Static_Pushdown', [[970, 150], [320, 50]], 'div-gpt-ad-1518104394203-0').defineSizeMapping(pushdownMap).addService(googletag.pubads());
+    googletag.defineSlot('/43271057/AAA_Static_Pushdown', [[1245, 150], [970, 150], [320, 50]], 'div-gpt-ad-1523533815563-0').defineSizeMapping(pushdownMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Leaderboard', [[728, 90], [320, 50]], 'div-gpt-ad-1518099474852-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Leaderboard_2', [[728, 90], [320, 50]], 'div-gpt-ad-1521832548877-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Filmstrip', [300, 600], 'div-gpt-ad-1518099514073-0').defineSizeMapping(filmstripMap).addService(googletag.pubads());

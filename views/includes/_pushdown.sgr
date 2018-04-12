@@ -1,7 +1,7 @@
 .g-ad-pushdown
   // /43271057/AAA_Static_Pushdown
-  div#div-gpt-ad-1518104394203-0
+  div#div-gpt-ad-1523533815563-0
     script.
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1518104394203-0'); });
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1523533815563-0'); });
 
-  // img(src="http://placehold.it/970x90/969696/CCCCCC?text=PushDown", alt="")
+  // img(src="http://placehold.it/1245x150/575755/CCCCCC?text=PushDown", alt="")
