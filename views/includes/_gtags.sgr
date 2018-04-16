@@ -41,7 +41,12 @@ script.
     googletag.defineSlot('/43271057/AAA_Static_Filmstrip', [300, 600], 'div-gpt-ad-1518099514073-0').defineSizeMapping(filmstripMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Left_Takeover', [170, 980], 'div-gpt-ad-1521829251016-0').defineSizeMapping(takeoverMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Right_Takeover', [170, 980], 'div-gpt-ad-1521829499958-0').defineSizeMapping(takeoverMap).addService(googletag.pubads());
+    googletag.defineSlot('/43271057/AAA_Static_interstitial', [[640, 480], [320, 480]], 'div-gpt-ad-1523874209243-0').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+     console.log('Creative with id: ' + event.creativeId +
+      ' is rendered to slot of size: ' + event.size[0] + 'x' + event.size[1]);
+    });
   });
