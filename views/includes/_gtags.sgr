@@ -35,6 +35,11 @@ script.
        	addSize([0, 0], []).
     	// tablets
        	addSize([1245, 600], [170, 980]).build();
+    var interstitialMap = googletag.sizeMapping().
+      // smartphone
+        addSize([0, 0], [320, 480]).
+      // tablets
+        addSize([980, 690], [640, 480]).build();
     googletag.defineSlot('/43271057/AAA_Static_Pushdown', [[1245, 150], [970, 150], [320, 50]], 'div-gpt-ad-1523533815563-0').defineSizeMapping(pushdownMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Leaderboard', [[728, 90], [320, 50]], 'div-gpt-ad-1518099474852-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
     googletag.defineSlot('/43271057/AAA_Static_Leaderboard_2', [[728, 90], [320, 50]], 'div-gpt-ad-1521832548877-0').defineSizeMapping(leaderboardMap).addService(googletag.pubads());
@@ -45,8 +50,8 @@ script.
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
-    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
-     console.log('Creative with id: ' + event.creativeId +
-      ' is rendered to slot of size: ' + event.size[0] + 'x' + event.size[1]);
-    });
+    // googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    //  console.log('Creative with id: ' + event.creativeId +
+    //   ' is rendered to slot of size: ' + event.size[0] + 'x' + event.size[1]);
+    // });
   });
